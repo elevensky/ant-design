@@ -5,7 +5,7 @@ var antd = {
   Tooltip: require('./components/tooltip'),
   Tabs: require('./components/tabs'),
   Modal: require('./components/modal'),
-  Menu: require('rc-menu'),
+  Menu: require('./components/menu'),
   Dropdown: require('./components/dropdown'),
   Progress: require('./components/progress'),
   Popover: require('./components/popover'),

@@ -15,9 +15,11 @@ var Test = React.createClass({
       visible: false
     }
   },
-  showModal() {
+  showModal(e) {
     this.setState({
-      visible: true
+      visible: true,
+      x:e.clientX,
+      y:e.clientY
     });
   },
   handleOk() {
@@ -38,7 +40,9 @@ var Test = React.createClass({
       <Modal title="第一个 Modal"
         visible={this.state.visible}
         onOk={this.handleOk}
-        onCancel={this.handleCancel}>
+        onCancel={this.handleCancel}
+        x={this.state.x}
+        y={this.state.y}>
         <p>对话框的内容</p>
         <p>对话框的内容</p>
         <p>对话框的内容</p>

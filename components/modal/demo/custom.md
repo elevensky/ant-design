@@ -17,9 +17,11 @@ var Test = React.createClass({
       visible: false
     };
   },
-  showModal() {
+  showModal(e) {
     this.setState({
-      visible: true
+      visible: true,
+      x:e.clientX,
+      y:e.clientY
     });
   },
   handleOk() {
@@ -44,7 +46,9 @@ var Test = React.createClass({
       <Modal title="对话框标题"
         visible={this.state.visible}
         onOk={this.handleOk}
-        onCancel={this.handleCancel}>
+        onCancel={this.handleCancel}
+        x={this.state.x}
+        y={this.state.y}>
         <p>{this.state.ModalText}</p>
       </Modal>
     </div>;
