@@ -18,8 +18,8 @@ var Test = React.createClass({
   showModal(e) {
     this.setState({
       visible: true,
-      x:e.clientX,
-      y:e.clientY
+      clientX:e.clientX,
+      clientY:e.clientY
     });
   },
   handleOk() {
@@ -41,8 +41,8 @@ var Test = React.createClass({
         visible={this.state.visible}
         onOk={this.handleOk}
         onCancel={this.handleCancel}
-        x={this.state.x}
-        y={this.state.y}>
+        clientX={this.state.clientX}
+        clientY={this.state.clientY}>
         <p>对话框的内容</p>
         <p>对话框的内容</p>
         <p>对话框的内容</p>
